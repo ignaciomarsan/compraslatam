@@ -35,3 +35,4 @@ document.getElementById("purchaseForm").addEventListener("submit", function(e) {
     // Limpiar el formulario
     document.getElementById("purchaseForm").reset();
 });
+
