@@ -1,0 +1,51 @@
+!DOCTYPE html
+html lang=es
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleCompras LATAMtitle
+    link rel=stylesheet href=styles.css
+head
+body
+    div class=container
+        h1Compras en América Latinah1
+
+        !-- Botones principales --
+        div class=main-buttons
+            button id=buyBtnQuiero Comprarbutton
+            button id=orderListBtnLista de Pedidos de Compradoresbutton
+        div
+
+        !-- Formulario de compra --
+        div id=buyForm class=hidden
+            h2Formulario de Comprah2
+            form id=purchaseForm
+                label for=articleNameNombre del Artículolabel
+                input type=text id=articleName name=articleName requiredbr
+
+                label for=quantityCantidadlabel
+                input type=number id=quantity name=quantity requiredbr
+
+                label for=descriptionDescripciónlabel
+                textarea id=description name=description requiredtextareabr
+
+                label for=companyNameNombre de la Empresalabel
+                input type=text id=companyName name=companyName requiredbr
+
+                label for=contactNameNombre de Contactolabel
+                input type=text id=contactName name=contactName requiredbr
+
+                label for=phoneTeléfonolabel
+                input type=tel id=phone name=phone requiredbr
+
+                label for=emailCorreo Electrónicolabel
+                input type=email id=email name=email requiredbr
+
+                button type=submitSubir mi Pedido de Comprabutton
+            form
+        div
+
+        !-- Planilla de pedidos --
+        div id=orderList class=hidden
+            h2Lista de Pedidos de Compradoresh2
+            table id=orders
