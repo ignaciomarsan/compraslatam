@@ -1,51 +1,72 @@
-!DOCTYPE html
-html lang=es
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    titleCompras LATAMtitle
-    link rel=stylesheet href=styles.css
-head
-body
-    div class=container
-        h1Compras en América Latinah1
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras LATAM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Compras en América Latina</h1>
 
-        !-- Botones principales --
-        div class=main-buttons
-            button id=buyBtnQuiero Comprarbutton
-            button id=orderListBtnLista de Pedidos de Compradoresbutton
-        div
+        <!-- Botones principales -->
+        <div class="main-buttons">
+            <button id="buyBtn">Quiero Comprar</button>
+            <button id="orderListBtn">Lista de Pedidos de Compradores</button>
+        </div>
 
-        !-- Formulario de compra --
-        div id=buyForm class=hidden
-            h2Formulario de Comprah2
-            form id=purchaseForm
-                label for=articleNameNombre del Artículolabel
-                input type=text id=articleName name=articleName requiredbr
+        <!-- Formulario de compra -->
+        <div id="buyForm" class="hidden">
+            <h2>Formulario de Compra</h2>
+            <form id="purchaseForm">
+                <label for="articleName">Nombre del Artículo:</label>
+                <input type="text" id="articleName" name="articleName" required><br>
 
-                label for=quantityCantidadlabel
-                input type=number id=quantity name=quantity requiredbr
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" name="quantity" required><br>
 
-                label for=descriptionDescripciónlabel
-                textarea id=description name=description requiredtextareabr
+                <label for="description">Descripción:</label>
+                <textarea id="description" name="description" required></textarea><br>
 
-                label for=companyNameNombre de la Empresalabel
-                input type=text id=companyName name=companyName requiredbr
+                <label for="companyName">Nombre de la Empresa:</label>
+                <input type="text" id="companyName" name="companyName" required><br>
 
-                label for=contactNameNombre de Contactolabel
-                input type=text id=contactName name=contactName requiredbr
+                <label for="contactName">Nombre de Contacto:</label>
+                <input type="text" id="contactName" name="contactName" required><br>
 
-                label for=phoneTeléfonolabel
-                input type=tel id=phone name=phone requiredbr
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required><br>
 
-                label for=emailCorreo Electrónicolabel
-                input type=email id=email name=email requiredbr
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required><br>
 
-                button type=submitSubir mi Pedido de Comprabutton
-            form
-        div
+                <button type="submit">Subir mi Pedido de Compra</button>
+            </form>
+        </div>
 
-        !-- Planilla de pedidos --
-        div id=orderList class=hidden
-            h2Lista de Pedidos de Compradoresh2
-            table id=orders
+        <!-- Planilla de pedidos -->
+        <div id="orderList" class="hidden">
+            <h2>Lista de Pedidos de Compradores</h2>
+            <table id="ordersTable">
+                <thead>
+                    <tr>
+                        <th>Nombre del Artículo</th>
+                        <th>Cantidad</th>
+                        <th>Descripción</th>
+                        <th>Nombre de la Empresa</th>
+                        <th>Nombre de Contacto</th>
+                        <th>Teléfono</th>
+                        <th>Correo Electrónico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los pedidos serán añadidos aquí -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
